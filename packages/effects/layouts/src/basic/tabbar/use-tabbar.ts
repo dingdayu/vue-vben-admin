@@ -100,7 +100,7 @@ export function useTabbar() {
   );
 
   watch(
-    () => route.path,
+    () => [route.path, route.query],
     () => {
       const meta = route.matched?.[route.matched.length - 1]?.meta;
       tabbarStore.addTab({
