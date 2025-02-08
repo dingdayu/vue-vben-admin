@@ -555,7 +555,7 @@ function isTabShown(tab: TabDefinition) {
  * @param tab
  */
 function getTabPath(tab: RouteRecordNormalized | TabDefinition) {
-  return decodeURIComponent((tab as TabDefinition).fullPath || tab.path);
+  return decodeURIComponent(tab.path);
 }
 
 function routeToTab(route: RouteRecordNormalized) {
